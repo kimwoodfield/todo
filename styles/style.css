@@ -1,0 +1,16 @@
+.done {
+    text-decoration: line-through;
+}
+
+.error {
+    background-color: red;
+    width: 12em;
+}
+
+.error-border {
+    border-color: red;
+}
+
+span {
+    background-color: red;
+}
