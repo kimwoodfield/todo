@@ -4,10 +4,11 @@ var input = document.getElementById("userinput");
 var list = document.querySelector("#list");
 let totalTodos = document.querySelectorAll("li").length;
 var error = document.getElementById("error");
-var deletebtn
+let deletebtn = document.querySelector(".del-btn");
 
 
-// functions
+// Functions //
+
 // checks how many characters have been entered into the input
 function inputLength() {
     return input.value.length;
@@ -20,24 +21,33 @@ function addItemAfterClick() {
         li.appendChild(document.createTextNode(input.value));
         list.appendChild(li);
         input.value = "";
+        li.className = "list-item"
+        var deletebtn = document.createElement("button");
+        deletebtn.appendChild(document.createTextNode("Delete"));
+        list.appendChild(deletebtn);
+        deletebtn.className = "del-btn";
     }
 }
 
 // Checks the list item types of the todo list
-// function checkListTypes() {
-//     // grabs the elements currently inside the unordered list element
-//     let listItems = document.querySelector("#list").children;
-//     let liElems = [];
-//     // creates a variable of 'listItem' for each item in the list
-//     for (const listItem of listItems) {
-//         // 
-//         if (listItem.tagName === "LI") {
-//             liElems.push("listItem");
-//             return liElems.length;
-//         }
-//     }
+function checkList() {
+    let listItems = document.querySelector("#list").children;
+    let listItemLength = document.querySelector("#list").children.length;
+    let liElems = [];
+    // creates a variable of 'listItem' for each item in the list
+    if (listItemLength === 0) {
+        return liElems.length;
+    } else {
+        for (let listItem of listItems) {
+            if (listItem.tagName === "LI") {
+                liElems.push("listItem");
+            }
+        }
+        return liElems.length;
+    }
+}
 
-// }
+// Removes an item from the list
 
 
 
@@ -45,10 +55,9 @@ function addItemAfterClick() {
 
 // Event Listeners
 
-// Handles adding a new list item
 add.addEventListener("click", function() {
 let totalTodos = document.querySelector("#list").children.length;
-if (totalTodos < 5) {
+if (checkList() < 5) {
     addItemAfterClick();
 } else {
     if (error.children.length === 0) {
@@ -61,7 +70,6 @@ if (totalTodos < 5) {
         }        
     }
 });
-
 
 
 // Features to add -
