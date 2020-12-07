@@ -38,5 +38,3 @@ function addListItems() {
     document.getElementById("list").appendChild(deleteButton);
 
 }
-
-
