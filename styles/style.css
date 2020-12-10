@@ -92,9 +92,9 @@ ul > div > button {
     border-color: red;
 }
 
-span {
+/* span {
     background-color: red;
-}
+} */
 
 .complete {
     text-decoration: line-through;
