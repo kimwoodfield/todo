@@ -1,12 +1,29 @@
 const add = document.getElementById("add");
 const userinput = document.querySelector("input");
 
-add.addEventListener("click", checkInputLength);
+add.addEventListener("click", addTodo);
+
+
+// Adds the list item, delete and edit button to the todo list
+function addTodo() {
+    if (userinput.value.length > 0) {
+        addTodoItems();
+        clearUserInput();
+    } else {
+        console.log('Please enter a character.');
+    }
+}
+
 
 
 // Returns the length of the input
 function checkInputLength() {
     console.log(userinput.value.length);
+}
+
+// Checks the input value
+function checkInputValue() {
+    console.log(userinput.value);
 }
 
 
@@ -15,29 +32,29 @@ function clearUserInput() {
     userinput.value = '';
 }
 
-
-// Handles creating a new list item
-function addListItem() {
+// Handles creating a new todo item
+function addTodoItems() {
+    // List Item
     const newLI = document.createElement("LI");
     const textnode = document.createTextNode(userinput.value);
     newLI.appendChild(textnode);
     document.getElementById("list").appendChild(newLI);
-}
 
-
-// Handles creating a new edit button for the list item
-function addDeleteBtn() {
+    // Edit Button
     const editButton = document.createElement("button");
     const editButtonText = document.createTextNode("Edit");
     editButton.appendChild(editButtonText);
     document.getElementById("list").appendChild(editButton);
-}
 
-
-// Handles creating a new delete button for the list item
-function addEditBtn() {
+    // Delete Button
     const deleteButton = document.createElement("button");
     const deleteButtonText = document.createTextNode("Delete");
+    deleteButton.classList.add("delete");
+    deleteButton.addEventListener("click", function(e) {
+        newLI.remove();
+        editButton.remove();
+        deleteButton.remove();
+    })
     deleteButton.appendChild(deleteButtonText);
     document.getElementById("list").appendChild(deleteButton);
 }
