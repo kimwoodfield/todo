@@ -1,4 +1,4 @@
-# todo
+# todo📝
 
 A todo list built with vanilla JavaScript
 
