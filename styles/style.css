@@ -1,3 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#202124;
+    color: #4E5860;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.container-header {
+    padding: 1.5rem 0;
+}
+
+.userinput {
+    width: 18rem;
+    height: 1.75rem;
+    background-color: #202124;
+    border: none;
+    border-bottom: .05rem solid grey;
+    color: lightgrey;
+    margin-bottom: .75rem;
+}
+
+#add {
+    height: 1.75rem;
+    width: 3rem;
+}
+
+#list > div {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    font-size: 14px;
+}
+
+ul > div {
+
+    padding: .5rem 0;
+}
+ul > div > button {
+    font-size: 11px;
+}
+
+
 .done {
     text-decoration: line-through;
 }

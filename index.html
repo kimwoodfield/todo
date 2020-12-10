@@ -10,17 +10,20 @@
 </head>
 
 <body>
-    <h1>Todo List</h1>
-    <p id="first">My first todo list</p>
-    <p>You can have 5 todo list items!</p>
-    <input type="text" placeholder="What's next..?" class="userinput">
-    <button id="add">Add</button>
+    <div class="container">
+        <div class="container-header">
+            <h1>Todo List</h1>
+        </div>
+        <div class="container-middle">
+            <input type="text" placeholder="I want to ..." class="userinput">
+            <button id="add">Add</button>
+        </div>
+        <div id="error">
+        </div>
 
-    <div id="error">
+        <ul id="list">
+        </ul>
     </div>
-
-    <ul id="list">
-    </ul>
 
 </body>
 
