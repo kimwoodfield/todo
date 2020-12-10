@@ -14,3 +14,11 @@
 span {
     background-color: red;
 }
+
+.complete {
+    text-decoration: line-through;
+}
+
+.inputError {
+    border: 1px solid red;
+}
