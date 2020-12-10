@@ -10,9 +10,11 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-family: sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
-
+h1 {
+    color: white;
+}
 .container-header {
     padding: 1.5rem 0;
 }
@@ -32,6 +34,7 @@ body {
     width: 3rem;
 }
 
+
 #list > div {
     display: flex;
     align-items: center;
@@ -40,14 +43,22 @@ body {
 li {
     list-style: none;
     font-size: 14px;
+    padding-right: 5rem;
 }
 
 ul > div {
-
     padding: .5rem 0;
+    background-color: lightgrey;
+    width: 21.3rem;
+    border-bottom: 1px solid lightgrey;
+}
+ul > div > input {
+    width: 1.5rem;
+    order: -1;
 }
 ul > div > button {
     font-size: 11px;
+    width: 3rem;
 }
 
 
