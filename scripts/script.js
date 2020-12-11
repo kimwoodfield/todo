@@ -81,10 +81,11 @@ function addTodoItems() {
 
     // Handles editing a new list item
     const editButton = document.createElement("button");
-    const editButtonText = document.createTextNode("Edit");
+    const editButtonIcon = document.createElement("icon");
+    editButtonIcon.innerHTML = `<i class="fas fa-edit"></i>`;
     editButton.className = "edit";
     editButton.setAttribute("id", count);
-    editButton.appendChild(editButtonText);
+    editButton.appendChild(editButtonIcon);
     container.appendChild(editButton); //check here
     editButton.onclick = function () {
         const p = prompt("Edit your todo");
@@ -95,7 +96,8 @@ function addTodoItems() {
 
     // Handles deleting a new list item, edit and delete button
     const deleteButton = document.createElement("button");
-    const deleteButtonText = document.createTextNode("Delete");
+    const deleteButtonIcon = document.createElement("icon");
+    deleteButtonIcon.innerHTML = `<i class="fas fa-trash-alt"></i>`;
     deleteButton.classList.add("delete");
     deleteButton.addEventListener("click", function(e) {
         container.remove();
@@ -104,7 +106,7 @@ function addTodoItems() {
         editButton.remove();
         deleteButton.remove();
     });
-    deleteButton.appendChild(deleteButtonText);
+    deleteButton.appendChild(deleteButtonIcon);
     container.appendChild(deleteButton);
     deleteButton.setAttribute("id", count);
 }
