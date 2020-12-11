@@ -18,6 +18,10 @@ h1 {
 .container-header {
     padding: 1.5rem 0;
 }
+.container-middle {
+    display: flex;
+    align-items: flex-start;
+}
 textarea:focus, input:focus, button:focus{
     outline: none;
 }
