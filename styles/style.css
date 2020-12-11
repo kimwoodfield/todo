@@ -21,11 +21,15 @@ h1 {
 textarea:focus, input:focus, button:focus{
     outline: none;
 }
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
 
 .userinput {
     width: 18rem;
-    font-size: 20px;
-    height: 1.75rem;
+    font-size: 18px;
+    height: 2rem;
     background-color: #202124;
     border: none;
     border-bottom: .05rem solid grey;
@@ -35,7 +39,7 @@ textarea:focus, input:focus, button:focus{
 }
 
 #add {
-    height: 1rem;
+    height: 2rem;
     width: 3rem;
     background-color:#202124;
     border: none;
